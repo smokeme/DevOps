@@ -3,7 +3,7 @@ version: "3.7"
 services:
   web:
     env_file:
-      - ./development.env
+      - ./.env
     build:
       context: .
       dockerfile: Dockerfile
@@ -19,7 +19,7 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     env_file:
-      - ./development.env
+      - ./.env
   nginx:
     build: ./data/nginx
     ports:
